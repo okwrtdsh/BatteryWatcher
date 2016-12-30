@@ -31,7 +31,7 @@ class BatteryBroadcastReceiver(val showStatus: (status: String, time: String, ra
                     BatteryManager.BATTERY_STATUS_FULL         -> "full"
                     else                                       -> "other"
                 },
-                SimpleDateFormat("yyyy/MM/dd hh:mm:ss", Locale.getDefault()).format(Date()),
+                SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault()).format(Date()),
                 "${intent.getIntExtra("level", 0)} / ${intent.getIntExtra("scale", 0)}"
             )
         }
